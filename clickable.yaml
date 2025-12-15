@@ -1,0 +1,8 @@
+clickable_minimum_required: 8.0.0
+builder: cmake
+kill: stt
+
+dependencies_target:
+  - libpulse0
+  - libasound2
+  - libatomic1

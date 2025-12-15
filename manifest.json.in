@@ -1,0 +1,15 @@
+{
+    "name": "stt.surajyadav",
+    "description": "A Simple Speech to Text Application.",
+    "architecture": "@CLICK_ARCH@",
+    "title": "STT",
+    "hooks": {
+        "stt": {
+            "apparmor": "stt.apparmor",
+            "desktop":  "stt.desktop"
+        }
+    },
+    "version": "1.0.0",
+    "maintainer": "Suraj Yadav <surajyadav200701@gmail.com>",
+    "framework" : "@CLICK_FRAMEWORK@"
+}
