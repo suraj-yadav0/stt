@@ -243,6 +243,7 @@ MainView {
                         anchors.centerIn: parent
                         width: units.gu(4)
                         height: units.gu(4)
+                        
                         name: SpeechRecognizer.isRecording ? "media-playback-stop" : "audio-input-microphone-symbolic"
                         color: textColor
                     }
@@ -270,15 +271,9 @@ MainView {
                     }
 
                     // Shadow effect
-                    layer.enabled: true
-                    layer.effect: Item {
-                        Rectangle {
-                            anchors.fill: parent
-                            anchors.margins: -units.gu(0.5)
-                            radius: width / 2
-                            color: "transparent"
-                        }
-                    }
+                    // NOTE: `layer.effect` must be a ShaderEffect. Using a plain Item here can
+                    // cause the entire layered item (including the Icon) to render as blank.
+                    layer.enabled: false
                 }
             }
 
